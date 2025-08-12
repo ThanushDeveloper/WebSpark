@@ -90,6 +90,7 @@ body {
   display: grid;
   grid-template-columns: 360px minmax(480px, 1.1fr) 420px;
   gap: 22px;
+  align-items: start;
 }
 .col { display: grid; gap: 22px; align-content: start; }
 
