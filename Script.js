@@ -12,6 +12,21 @@ function selectTab(tabName) {
   });
 }
 
+function alignCenterColumnWithCalendar() {
+  const dashboard = document.querySelector('.dashboard');
+  const centerCol = document.querySelector('.col.center');
+  const dailyRead = document.querySelector('.col.left .daily-read');
+  if (!dashboard || !centerCol || !dailyRead) return;
+  if (window.matchMedia('(max-width: 900px)').matches) {
+    centerCol.style.marginTop = '0px';
+    return;
+  }
+  const styles = window.getComputedStyle(dashboard);
+  const gap = parseInt(styles.gap || styles.rowGap || '22', 10) || 22;
+  const offset = dailyRead.getBoundingClientRect().height + gap;
+  centerCol.style.marginTop = `${offset}px`;
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   // Tabs
   document.querySelectorAll('.tab').forEach((btn) => {
@@ -46,6 +61,12 @@ window.addEventListener('DOMContentLoaded', () => {
           <div class="agenda-time">Added just now</div>
         </div>`;
       agenda.prepend(wrapper);
+      alignCenterColumnWithCalendar();
     });
   }
+
+  alignCenterColumnWithCalendar();
 });
+
+window.addEventListener('load', alignCenterColumnWithCalendar);
+window.addEventListener('resize', alignCenterColumnWithCalendar);
