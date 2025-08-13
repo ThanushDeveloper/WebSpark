@@ -1,0 +1,127 @@
+/* Base reset and variables */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #0b1221; /* dark backdrop to highlight panel card shadow like screenshot */
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  display: grid;
+  place-items: center;
+  color: #0F172A;
+}
+
+/* App container (to mimic screenshot canvas with padding) */
+.app {
+  padding: 24px;
+}
+
+/* Panel card */
+.panel {
+  width: 100%;
+  max-width: 559px;
+  max-height: 815px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 18px 18px 12px 18px; /* tight to match screenshot spacing */
+  box-shadow:
+    0 2px 2px rgba(0,0,0,0.02),
+    0 12px 24px rgba(19, 33, 69, 0.25),
+    inset 0 0 0 1px rgba(2, 6, 23, 0.06);
+  overflow: hidden;
+}
+
+.panel-title {
+  margin: 4px 0 8px 6px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #24405A; /* dark teal/blue like screenshot */
+}
+
+.consult-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 2px 0 2px; /* give slight inner space like screenshot */
+  overflow-y: auto;
+  max-height: 760px; /* keep inside panel height */
+  scrollbar-width: thin;
+  scrollbar-color: #183C5B #EAEFF5;
+}
+
+.consult-list::-webkit-scrollbar { width: 6px; }
+.consult-list::-webkit-scrollbar-track { background: #EAEFF5; border-radius: 8px; }
+.consult-list::-webkit-scrollbar-thumb { background: #183C5B; border-radius: 8px; }
+
+.consult-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  column-gap: 16px;
+  padding: 18px 10px 18px 10px;
+  border-bottom: 1px solid #EEF2F6;
+}
+
+.consult-item:last-child { border-bottom: none; }
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 0 0 3px #FFFFFF, 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.consult-info { min-width: 0; }
+
+.consult-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #24405A;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.consult-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6B7280; /* muted gray */
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.meta-sep {
+  font-size: 14px;
+  color: #C7CDD8;
+}
+
+.meta-date { color: #8A95A6; }
+.meta-time { color: #8A95A6; }
+
+.btn-primary {
+  justify-self: end;
+  background: #4E7DD9; /* blue button */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 16px;
+  height: 36px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03), inset 0 -1px 0 rgba(0,0,0,0.06);
+  letter-spacing: 0.1px;
+}
+
+.btn-primary:hover { filter: brightness(0.98); }
+.btn-primary:active { transform: translateY(0.5px); }
+
+/* Narrow layout tuning to match pixel spacing */
+@media (max-width: 420px) {
+  .consult-item { grid-template-columns: 44px 1fr; row-gap: 10px; }
+  .btn-primary { grid-column: 1 / -1; justify-self: start; }
+}
