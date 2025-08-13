@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Next patient's details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card" role="region" aria-label="Next patient's details">
+        <header class="card-top">
+          <h1 class="card-title">Next patient’s details</h1>
+          <a class="open-btn" href="#" aria-label="Open details in a new window">
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14 3h7v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 14L21 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 14v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </header>
+
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E7EEF6"/>
+                  <stop offset="1" stop-color="#F4F7FB"/>
+                </linearGradient>
+              </defs>
+              <circle cx="36" cy="36" r="36" fill="url(#g)"/>
+              <circle cx="36" cy="28" r="12" fill="#D6DEE8"/>
+              <path d="M12 60c6-10 18-16 24-16s18 6 24 16" fill="#D6DEE8"/>
+            </svg>
+          </div>
+
+          <h2 class="name">George Hill</h2>
+          <div class="meta">
+            <span>25 years old</span>
+            <span class="dot" aria-hidden="true">•</span>
+            <span class="location">
+              <svg class="pin" width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21s7-5.33 7-11a7 7 0 1 0-14 0c0 5.67 7 11 7 11z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              New York, USA
+            </span>
+          </div>
+        </div>
+
+        <ul class="vitals" role="list">
+          <li>
+            <span class="label">Blood</span>
+            <span class="value">0+</span>
+          </li>
+          <li>
+            <span class="label">Height</span>
+            <span class="value">176cm</span>
+          </li>
+          <li>
+            <span class="label">Weight</span>
+            <span class="value">86kg</span>
+          </li>
+        </ul>
+
+        <nav class="tabs" aria-label="Patient details tabs">
+          <button class="tab active" type="button">Summary</button>
+          <button class="tab" type="button">Conditions</button>
+          <button class="tab" type="button">Notes</button>
+        </nav>
+
+        <p class="summary-text">
+          James is a 32-year-old male with no known allergies or drug sensitivities. He has a history of
+          seasonal allergies and occasional migraines. He takes no medications regularly.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
