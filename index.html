@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patient Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Top navigation bar -->
+    <header class="navbar" role="banner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">CarePlus</span>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Consultations</a>
+        <a href="#" class="nav-link active" aria-current="page">Profiles</a>
+      </nav>
+
+      <div class="nav-actions">
+        <label class="search">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23 6.5 6.5 0 1 0-6.5 6.5 6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14Z"/></svg>
+          <input type="search" placeholder="Search patients" aria-label="Search" />
+        </label>
+        <button class="icon-button" aria-label="Notifications">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2 2 0 0 0 2-2H10a2 2 0 0 0 2 2Zm6-6V9a6 6 0 1 0-12 0v7L4 18v2h16v-2l-2-2Z"/></svg>
+        </button>
+        <div class="avatar sm" title="You" aria-hidden="true">JD</div>
+      </div>
+    </header>
+
+    <!-- App shell -->
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Patient sidebar">
+        <h1 class="sidebar-title">Patient Profile</h1>
+
+        <section class="profile-card">
+          <div class="avatar lg" aria-hidden="true">J</div>
+          <div class="profile-meta">
+            <div class="profile-name">Jane Doe</div>
+            <div class="profile-sub">32 years • New York, USA</div>
+          </div>
+        </section>
+
+        <nav class="side-nav" aria-label="Profile sections">
+          <a class="side-link active" href="#general">General Information</a>
+          <a class="side-link" href="#history">Medical History</a>
+          <a class="side-link" href="#notes">Consultation Notes</a>
+          <a class="side-link" href="#plans">Action Plans</a>
+          <a class="side-link" href="#files">Files</a>
+          <a class="side-link" href="#wearables">Wearable Stats</a>
+        </nav>
+      </aside>
+
+      <!-- Main content area -->
+      <main class="main" role="main">
+        <div class="toolbar">
+          <h2>General Information</h2>
+          <button class="btn primary">Edit Information</button>
+        </div>
+
+        <div class="content-grid">
+          <section class="cards" id="general">
+            <article class="card">
+              <h3>Demographics</h3>
+              <dl class="details">
+                <div class="row"><dt>Name</dt><dd>Jane Doe</dd></div>
+                <div class="row"><dt>Gender</dt><dd>Female</dd></div>
+                <div class="row"><dt>Date of Birth</dt><dd>May 7, 1994</dd></div>
+                <div class="row"><dt>Age</dt><dd>30</dd></div>
+              </dl>
+            </article>
+
+            <article class="card">
+              <h3>Contact Information</h3>
+              <dl class="details">
+                <div class="row"><dt>Email</dt><dd>janedoe@email.com</dd></div>
+                <div class="row"><dt>Phone</dt><dd>(000) 000-0000</dd></div>
+                <div class="row"><dt>Address</dt><dd>Elm Street 123, Pennsylvania</dd></div>
+              </dl>
+            </article>
+
+            <article class="card">
+              <h3>Insurance</h3>
+              <dl class="details">
+                <div class="row"><dt>Member ID</dt><dd>12345678</dd></div>
+                <div class="row"><dt>Policy Holder</dt><dd>Jane Doe</dd></div>
+                <div class="row"><dt>Additional Info</dt><dd>None</dd></div>
+              </dl>
+            </article>
+          </section>
+
+          <aside class="rail">
+            <article class="card">
+              <div class="card-head">
+                <h3>Patients</h3>
+                <a class="link" href="#">View all</a>
+              </div>
+              <ul class="patient-list">
+                <li class="patient">
+                  <div class="avatar md">JD</div>
+                  <div class="patient-meta">
+                    <div class="name">Jane Doe</div>
+                    <div class="sub">Last visit: 2w ago</div>
+                  </div>
+                  <span class="pill success">Active</span>
+                </li>
+                <li class="patient">
+                  <div class="avatar md">MS</div>
+                  <div class="patient-meta">
+                    <div class="name">Mark Stone</div>
+                    <div class="sub">Last visit: 5d ago</div>
+                  </div>
+                  <span class="pill warning">Review</span>
+                </li>
+                <li class="patient">
+                  <div class="avatar md">AR</div>
+                  <div class="patient-meta">
+                    <div class="name">Amelia Rose</div>
+                    <div class="sub">Last visit: 1m ago</div>
+                  </div>
+                  <span class="pill muted">Inactive</span>
+                </li>
+                <li class="patient">
+                  <div class="avatar md">TL</div>
+                  <div class="patient-meta">
+                    <div class="name">Tom Lee</div>
+                    <div class="sub">Last visit: yesterday</div>
+                  </div>
+                  <span class="pill success">Active</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
+                <h3>Quick Actions</h3>
+              </div>
+              <div class="actions">
+                <button class="btn">New Note</button>
+                <button class="btn">Upload File</button>
+                <button class="btn">Schedule</button>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+  </html>
+
