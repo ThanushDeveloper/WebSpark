@@ -384,6 +384,10 @@
             <article class="resume" data-page="resume">
                 <header>
                     <h2 class="h2 article-title">Resume</h2>
+                    <button id="download-resume-btn" class="form-btn" style="max-width: 220px; margin-top: 12px;">
+                        <ion-icon name="download-outline"></ion-icon>
+                        <span>Download Resume</span>
+                    </button>
                 </header>
                 <section class="timeline">
                     <div class="title-wrapper">
@@ -872,6 +876,26 @@
         });
 
         observer.observe(container);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-YcsIPnP8n5bMq3qO9v4y2V2eR4YFysDcVq3C24vZ6r3rGQ8X8r9xGfZJgB9o6pJrHcS2Rr0gYB1zqvIh7v9iVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        (function(){
+            var downloadBtn = document.getElementById('download-resume-btn');
+            if(downloadBtn){
+                downloadBtn.addEventListener('click', function(){
+                    var resumeEl = document.querySelector('article.resume');
+                    if(!resumeEl || typeof html2pdf === 'undefined'){ return; }
+                    var opt = {
+                        margin:       0.5,
+                        filename:     'Thanush-Resume.pdf',
+                        image:        { type: 'jpeg', quality: 0.98 },
+                        html2canvas:  { scale: 2, useCORS: true, scrollY: 0 },
+                        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+                    };
+                    html2pdf().set(opt).from(resumeEl).save();
+                });
+            }
+        })();
     </script>
 
 </body>
