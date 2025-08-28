@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+          <button class="icon-btn sidebar__close" id="sidebarClose" aria-label="Close sidebar">
+            <span class="icon">✕</span>
+          </button>
+          <div class="brand">
+            <div class="brand__logo">🩺</div>
+            <div class="brand__name">CarePortal</div>
+          </div>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="Primary">
+          <a href="#profile" class="nav-link active">Patient Profile</a>
+          <a href="#appointments" class="nav-link">Appointments</a>
+          <a href="#prescriptions" class="nav-link">E-Prescriptions</a>
+          <a href="#records" class="nav-link">Medical Records</a>
+          <a href="#billing" class="nav-link">Billing & Payments</a>
+          <a href="#notifications" class="nav-link">Notifications</a>
+          <a href="#quick-actions" class="nav-link">Quick Actions</a>
+          <a href="#others" class="nav-link">Other</a>
+        </nav>
+
+        <div class="sidebar__footer">
+          <div class="theme-toggle">
+            <input type="checkbox" id="themeSwitch" aria-label="Toggle dark mode" />
+            <label for="themeSwitch">Dark mode</label>
+          </div>
+          <button class="btn btn-outline" id="logoutBtnSidebar">Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-btn" id="sidebarOpen" aria-label="Open sidebar">
+            <span class="icon">☰</span>
+          </button>
+          <h1 class="topbar__title">Patient Dashboard</h1>
+          <div class="topbar__actions">
+            <div class="theme-toggle theme-toggle--topbar">
+              <input type="checkbox" id="themeSwitchTop" aria-label="Toggle dark mode" />
+              <label for="themeSwitchTop">Dark</label>
+            </div>
+          </div>
+        </header>
+
+        <section id="profile" class="section">
+          <h2 class="section__title">Patient Profile</h2>
+          <div class="card profile">
+            <div class="profile__identity">
+              <img class="profile__avatar" src="https://api.dicebear.com/8.x/initials/svg?seed=JD" alt="Patient avatar" />
+              <div class="profile__summary">
+                <div class="profile__name" id="patientName">John Doe</div>
+                <div class="profile__meta" id="patientMeta">Age 32 • Male</div>
+                <div class="profile__id" id="patientId">Patient ID: P-000123</div>
+              </div>
+            </div>
+            <div class="profile__details">
+              <div class="detail">
+                <div class="detail__label">Mobile</div>
+                <div class="detail__value" id="patientMobile">+1 202-555-0132</div>
+              </div>
+              <div class="detail">
+                <div class="detail__label">Email</div>
+                <div class="detail__value" id="patientEmail">john.doe@example.com</div>
+              </div>
+              <div class="detail">
+                <div class="detail__label">Blood Group</div>
+                <div class="detail__value" id="patientBlood">O+</div>
+              </div>
+              <div class="detail">
+                <div class="detail__label">Allergies</div>
+                <div class="detail__value" id="patientAllergies">Penicillin</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="appointments" class="section">
+          <h2 class="section__title">Appointments</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Upcoming</h3>
+                <button class="btn btn-primary" id="bookAppointmentBtn">Book New</button>
+              </div>
+              <div class="table" id="upcomingAppointments"></div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Past</h3>
+              </div>
+              <div class="table" id="pastAppointments"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="prescriptions" class="section">
+          <h2 class="section__title">E-Prescriptions</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Latest Prescription</h3>
+                <div class="card__actions">
+                  <button class="btn btn-outline" id="viewLatestPdfBtn">View PDF</button>
+                  <button class="btn btn-primary" id="downloadLatestPdfBtn">Download</button>
+                </div>
+              </div>
+              <div class="list" id="latestMedicines"></div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Previous Prescriptions</h3>
+              </div>
+              <div class="table" id="prescriptionHistory"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="records" class="section">
+          <h2 class="section__title">Medical Records</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Upload Lab Results</h3>
+                <label class="file-upload">
+                  <input type="file" id="labUpload" multiple />
+                  <span class="btn btn-secondary">Choose files</span>
+                </label>
+              </div>
+              <div class="list" id="uploadedFiles"></div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Records</h3>
+              </div>
+              <div class="table" id="medicalRecords"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="billing" class="section">
+          <h2 class="section__title">Billing & Payments</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Pending Payments</h3>
+              </div>
+              <div class="table" id="pendingPayments"></div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Past Invoices</h3>
+              </div>
+              <div class="table" id="pastInvoices"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="notifications" class="section">
+          <h2 class="section__title">Notifications & Alerts</h2>
+          <div class="list list--notifications" id="notificationsList"></div>
+        </section>
+
+        <section id="quick-actions" class="section">
+          <h2 class="section__title">Quick Actions</h2>
+          <div class="grid grid--4">
+            <button class="action-card" id="qaBookAppt">
+              <div class="action-card__icon">📅</div>
+              <div class="action-card__title">Book Appointment</div>
+            </button>
+            <button class="action-card" id="qaDownloadRx">
+              <div class="action-card__icon">💊</div>
+              <div class="action-card__title">Download Prescription</div>
+            </button>
+            <button class="action-card" id="qaUploadReport">
+              <div class="action-card__icon">📤</div>
+              <div class="action-card__title">Upload Medical Report</div>
+            </button>
+            <button class="action-card" id="qaContactDoctor">
+              <div class="action-card__icon">💬</div>
+              <div class="action-card__title">Contact Doctor</div>
+            </button>
+          </div>
+        </section>
+
+        <section id="others" class="section">
+          <h2 class="section__title">Other</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Health Tips / Doctor Notes</h3>
+              </div>
+              <ul class="list" id="healthTips"></ul>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h3 class="card__title">Emergency Contacts</h3>
+              </div>
+              <div class="table" id="emergencyContacts"></div>
+            </div>
+          </div>
+          <div class="section__actions">
+            <button class="btn btn-danger" id="logoutBtn">Logout</button>
+          </div>
+        </section>
+
+        <footer class="footer">© <span id="year"></span> CarePortal • Demo UI</footer>
+      </main>
+    </div>
+
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="false">
+      <div class="modal__backdrop" id="modalBackdrop"></div>
+      <div class="modal__dialog" role="document" aria-labelledby="modalTitle">
+        <div class="modal__header">
+          <h3 class="modal__title" id="modalTitle">Book Appointment</h3>
+          <button class="icon-btn" id="modalClose" aria-label="Close modal">✕</button>
+        </div>
+        <div class="modal__body">
+          <form id="appointmentForm" class="form">
+            <label class="form__field">
+              <span class="form__label">Doctor</span>
+              <select id="apptDoctor" required>
+                <option value="">Select</option>
+                <option>Dr. Smith (Cardiology)</option>
+                <option>Dr. Chen (Dermatology)</option>
+                <option>Dr. Patel (General)</option>
+              </select>
+            </label>
+            <label class="form__field">
+              <span class="form__label">Date</span>
+              <input type="date" id="apptDate" required />
+            </label>
+            <label class="form__field">
+              <span class="form__label">Time</span>
+              <input type="time" id="apptTime" required />
+            </label>
+            <div class="form__actions">
+              <button type="button" class="btn" id="modalCancel">Cancel</button>
+              <button type="submit" class="btn btn-primary">Book</button>
+            </div>
+          </form>
+          <div id="modalMessage" class="modal__message" hidden></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+
