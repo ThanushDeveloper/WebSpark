@@ -3,9 +3,26 @@
   const navToggle = document.querySelector('.nav__toggle');
   const navMenu = document.getElementById('primary-navigation');
   const yearEl = document.getElementById('year');
+  const rotatorEl = document.querySelector('.rotator');
 
   // Update footer year
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Rotating hero word
+  if (rotatorEl) {
+    try {
+      const wordsAttr = rotatorEl.getAttribute('data-words');
+      const words = wordsAttr ? JSON.parse(wordsAttr) : [];
+      let index = 0;
+      const rotate = () => {
+        index = (index + 1) % words.length;
+        rotatorEl.textContent = words[index];
+      };
+      if (words.length > 1) setInterval(rotate, 1800);
+    } catch (_) {
+      /* ignore */
+    }
+  }
 
   // Mobile menu toggle
   if (navToggle && navMenu) {
