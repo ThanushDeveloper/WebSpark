@@ -1,1 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Professional front-end developer portfolio with responsive design, animations, and interactive features." />
+    <meta name="keywords" content="portfolio, front-end, web developer, responsive, UI, UX, JavaScript" />
+    <meta name="author" content="Your Name" />
+    <meta name="theme-color" content="#f5b301" />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Front‑end Developer Portfolio" />
+    <meta property="og:description" content="A clean, modern, and fully responsive developer portfolio." />
+    <meta property="og:image" content="Assets/Group (1).png" />
+
+    <title>Portfolio • Front‑end Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" integrity="sha512-3hE9+1xK3zG1vTqGJZK7dMrU3A3lG3AQrG5f3jC2gQ2g3kYg8cK8l9N3X1mG1iZQbJ2aT9Hn2o7cS7QnYxq8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container nav">
+        <a href="#home" class="brand" aria-label="Go to home">
+          <span class="brand__logo">RA</span>
+          <span class="brand__text">Rayan Adrilard</span>
+        </a>
+
+        <nav class="nav__menu" id="navMenu" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link active" href="#home">Home</a></li>
+            <li><a class="nav__link" href="#services">Services</a></li>
+            <li><a class="nav__link" href="#skills">Skills</a></li>
+            <li><a class="nav__link" href="#experience">Experience</a></li>
+            <li><a class="nav__link" href="#portfolio">Portfolio</a></li>
+            <li><a class="nav__link" href="#blog">Blog</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav__actions">
+          <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="btn-icon nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="section hero" id="home">
+        <div class="container hero__grid">
+          <div class="hero__content reveal-up">
+            <div class="eyebrow">Front‑end Developer</div>
+            <h1 class="hero__title">Hi, I’m <span class="text-gradient">Rayan Adrilard</span></h1>
+            <p class="hero__subtitle">
+              <span class="typed" data-rotate='["I build fast, accessible UIs.", "I craft delightful web apps.", "I turn ideas into products."]' aria-live="polite"></span>
+            </p>
+            <p class="hero__desc">
+              I specialize in designing and building responsive, performance‑focused web experiences with modern
+              JavaScript, React, and elegant design systems.
+            </p>
+            <div class="hero__cta">
+              <a href="#contact" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+              <a href="#portfolio" class="btn btn--ghost"><i class="fa-solid fa-briefcase"></i> View Work</a>
+            </div>
+            <div class="hero__stats">
+              <div class="stat"><div class="stat__num counter" data-target="6">0</div><div class="stat__label">Years Exp.</div></div>
+              <div class="stat"><div class="stat__num counter" data-target="120">0</div><div class="stat__label">Projects</div></div>
+              <div class="stat"><div class="stat__num counter" data-target="48">0</div><div class="stat__label">Happy Clients</div></div>
+            </div>
+          </div>
+          <div class="hero__media reveal-up" aria-hidden="true">
+            <div class="hero__image-wrap">
+              <img src="Assets/Group (1).png" alt="Portrait of Rayan Adrilard" class="hero__image" />
+              <div class="floating-badge"><i class="fa-solid fa-code"></i></div>
+              <div class="floating-badge badge--2"><i class="fa-solid fa-bolt"></i></div>
+              <div class="floating-badge badge--3"><i class="fa-solid fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section" id="services">
+        <div class="container">
+          <h2 class="section__title reveal-up">My Services</h2>
+          <p class="section__desc reveal-up">I help teams ship polished, maintainable products with a strong focus on performance and accessibility.</p>
+
+          <div class="grid cards-6">
+            <article class="card service reveal-up">
+              <i class="fa-solid fa-laptop-code card__icon"></i>
+              <h3 class="card__title">Web Development</h3>
+              <p class="card__desc">Modern, scalable SPAs and MPAs with clean architectures.</p>
+            </article>
+            <article class="card service reveal-up">
+              <i class="fa-solid fa-swatchbook card__icon"></i>
+              <h3 class="card__title">UI/UX Design</h3>
+              <p class="card__desc">Design systems, component libraries, and delightful interactions.</p>
+            </article>
+            <article class="card service reveal-up">
+              <i class="fa-solid fa-mobile-screen-button card__icon"></i>
+              <h3 class="card__title">Responsive Design</h3>
+              <p class="card__desc">Mobile‑first, fluid layouts that look beautiful on any device.</p>
+            </article>
+            <article class="card service reveal-up">
+              <i class="fa-solid fa-rocket card__icon"></i>
+              <h3 class="card__title">Performance</h3>
+              <p class="card__desc">Core Web Vitals optimization and smooth, high‑FPS UI.</p>
+            </article>
+            <article class="card service reveal-up">
+              <i class="fa-solid fa-shield-heart card__icon"></i>
+              <h3 class="card__title">Accessibility</h3>
+              <p class="card__desc">WCAG‑compliant experiences that everyone can use.</p>
+            </article>
+            <article class="card service reveal-up">
+              <i class="fa-solid fa-magnifying-glass-chart card__icon"></i>
+              <h3 class="card__title">SEO & Analytics</h3>
+              <p class="card__desc">Rank higher and learn from user behavior.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section section--alt" id="skills">
+        <div class="container">
+          <h2 class="section__title reveal-up">Skills</h2>
+          <p class="section__desc reveal-up">A balanced toolbelt, always evolving.</p>
+
+          <div class="skills__grid">
+            <div class="skills__bars reveal-up">
+              <div class="bar">
+                <div class="bar__label">HTML5</div>
+                <div class="bar__track"><div class="bar__fill" data-width="95"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__label">CSS3 / SASS</div>
+                <div class="bar__track"><div class="bar__fill" data-width="92"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__label">JavaScript (ESNext)</div>
+                <div class="bar__track"><div class="bar__fill" data-width="90"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__label">React</div>
+                <div class="bar__track"><div class="bar__fill" data-width="88"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__label">Node.js</div>
+                <div class="bar__track"><div class="bar__fill" data-width="75"></div></div>
+              </div>
+            </div>
+            <div class="skills__tags reveal-up">
+              <ul class="taglist">
+                <li class="tag">TypeScript</li>
+                <li class="tag">Next.js</li>
+                <li class="tag">Redux</li>
+                <li class="tag">REST / GraphQL</li>
+                <li class="tag">Testing</li>
+                <li class="tag">Tailwind</li>
+                <li class="tag">Figma</li>
+                <li class="tag">Accessibility</li>
+                <li class="tag">Animations</li>
+                <li class="tag">CI/CD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="container">
+          <h2 class="section__title reveal-up">Experience</h2>
+          <p class="section__desc reveal-up">Selected roles and education.</p>
+          <div class="timeline reveal-up">
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <h3>Senior Front‑end Engineer • Acme Corp</h3>
+                <div class="meta">2022 — Present</div>
+                <p>Leading UI architecture for a multi‑tenant SaaS platform. Introduced design system and modern build tooling.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <h3>Front‑end Developer • Pixel Studio</h3>
+                <div class="meta">2019 — 2022</div>
+                <p>Shipped accessible, high‑performance marketing sites and e‑commerce storefronts for global brands.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <h3>BSc Computer Science • State University</h3>
+                <div class="meta">2015 — 2019</div>
+                <p>Graduated with honors. Focused on human‑computer interaction and web technologies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section section--alt" id="testimonials">
+        <div class="container">
+          <h2 class="section__title reveal-up">Recommendations</h2>
+          <p class="section__desc reveal-up">Kind words from collaborators.</p>
+
+          <div class="slider" aria-label="Testimonials">
+            <div class="slider__track" id="testimonialTrack">
+              <article class="card testimonial">
+                <div class="testimonial__header">
+                  <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=160&q=60" alt="Client portrait" class="avatar" />
+                  <div>
+                    <h3>Sarah Quinn</h3>
+                    <div class="rating" aria-label="5 stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>Rayan is meticulous and fast. Our conversion rate improved 28% after his redesign.</p>
+              </article>
+
+              <article class="card testimonial">
+                <div class="testimonial__header">
+                  <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=160&q=60" alt="Client portrait" class="avatar" />
+                  <div>
+                    <h3>Amir Joseph</h3>
+                    <div class="rating" aria-label="5 stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>Great communicator who cares about craft and performance. Highly recommend.</p>
+              </article>
+
+              <article class="card testimonial">
+                <div class="testimonial__header">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=160&q=60" alt="Client portrait" class="avatar" />
+                  <div>
+                    <h3>Camila Roy</h3>
+                    <div class="rating" aria-label="5 stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>Delivered a complex project on time with pixel‑perfect quality.</p>
+              </article>
+            </div>
+            <div class="slider__controls">
+              <button class="btn-icon" id="prevTestimonial" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="btn-icon" id="nextTestimonial" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="section" id="pricing">
+        <div class="container">
+          <h2 class="section__title reveal-up">Price Plans</h2>
+          <p class="section__desc reveal-up">Flexible options tailored to your needs.</p>
+          <div class="grid cards-3">
+            <article class="card pricing reveal-up">
+              <h3 class="pricing__title">Silver</h3>
+              <div class="pricing__price"><span>$</span>0</div>
+              <ul class="pricing__features">
+                <li>Consultation</li>
+                <li>Project scope</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost">Get Started</a>
+            </article>
+            <article class="card pricing pricing--featured reveal-up">
+              <div class="badge">Popular</div>
+              <h3 class="pricing__title">Gold</h3>
+              <div class="pricing__price"><span>$</span>80</div>
+              <ul class="pricing__features">
+                <li>Design + Development</li>
+                <li>Performance audit</li>
+                <li>Priority support</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary">Choose Plan</a>
+            </article>
+            <article class="card pricing reveal-up">
+              <h3 class="pricing__title">Diamond</h3>
+              <div class="pricing__price"><span>$</span>120</div>
+              <ul class="pricing__features">
+                <li>Dedicated sprint</li>
+                <li>Analytics + A/B tests</li>
+                <li>Retention strategy</li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost">Get Started</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section class="section section--alt" id="portfolio">
+        <div class="container">
+          <h2 class="section__title reveal-up">Portfolio</h2>
+          <p class="section__desc reveal-up">Recent work across web apps, branding, and UI design.</p>
+
+          <div class="filter reveal-up" role="tablist" aria-label="Portfolio filter">
+            <button class="filter__btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter__btn" data-filter="web" role="tab">Web</button>
+            <button class="filter__btn" data-filter="ui" role="tab">UI/UX</button>
+            <button class="filter__btn" data-filter="brand" role="tab">Branding</button>
+          </div>
+
+          <div class="portfolio__grid" id="portfolioGrid">
+            <figure class="portfolio__item" data-cat="web">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=60" alt="Dashboard design" />
+              <figcaption>
+                <h3>Analytics Dashboard</h3>
+                <p>Web • SPA</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="ui">
+              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=60" alt="Mobile app UI" />
+              <figcaption>
+                <h3>Finance App</h3>
+                <p>UI/UX</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="brand">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=60" alt="Branding mockup" />
+              <figcaption>
+                <h3>Brand Identity</h3>
+                <p>Branding</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="web">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=60" alt="Landing page" />
+              <figcaption>
+                <h3>Landing Page</h3>
+                <p>Web</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="ui">
+              <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=60" alt="UI kit" />
+              <figcaption>
+                <h3>Design System</h3>
+                <p>UI/UX</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="brand">
+              <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?w=800&q=60" alt="Business cards" />
+              <figcaption>
+                <h3>Stationery</h3>
+                <p>Branding</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="web">
+              <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?w=800&q=60" alt="Ecommerce" />
+              <figcaption>
+                <h3>E‑commerce</h3>
+                <p>Web</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+            <figure class="portfolio__item" data-cat="ui">
+              <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&q=60" alt="Code editor" />
+              <figcaption>
+                <h3>Developer Tools</h3>
+                <p>UI/UX</p>
+                <button class="btn-icon" data-lightbox><i class="fa-solid fa-maximize"></i></button>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="section" id="blog">
+        <div class="container">
+          <h2 class="section__title reveal-up">Blog</h2>
+          <p class="section__desc reveal-up">Thoughts on front‑end, DX, and design.</p>
+
+          <div class="grid cards-3">
+            <article class="card post reveal-up">
+              <img class="post__image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=60" alt="Laptop coding" />
+              <div class="post__content">
+                <h3 class="post__title">10 Tips for Faster React Apps</h3>
+                <p class="post__meta">Performance • 8 min</p>
+                <p>From code‑splitting to memoization, here are practical wins you can apply today.</p>
+                <a href="#" class="post__read">Read</a>
+              </div>
+            </article>
+            <article class="card post reveal-up">
+              <img class="post__image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=60" alt="UI wireframes" />
+              <div class="post__content">
+                <h3 class="post__title">Design Systems that Scale</h3>
+                <p class="post__meta">Design • 6 min</p>
+                <p>Principles for building flexible, consistent component libraries.</p>
+                <a href="#" class="post__read">Read</a>
+              </div>
+            </article>
+            <article class="card post reveal-up">
+              <img class="post__image" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=60" alt="Analytics dashboard" />
+              <div class="post__content">
+                <h3 class="post__title">Accessible by Default</h3>
+                <p class="post__meta">Accessibility • 5 min</p>
+                <p>A lightweight checklist to ensure your app works for everyone.</p>
+                <a href="#" class="post__read">Read</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <h2 class="section__title reveal-up">Get in touch</h2>
+          <p class="section__desc reveal-up">Have a project in mind? Let’s make it happen.</p>
+
+          <div class="contact__grid">
+            <div class="contact__card reveal-up">
+              <h3>Contact Information</h3>
+              <ul class="contact__list">
+                <li><i class="fa-solid fa-location-dot"></i> San Francisco, CA</li>
+                <li><i class="fa-solid fa-phone"></i> +1 (555) 123‑4567</li>
+                <li><i class="fa-solid fa-envelope"></i> hello@example.com</li>
+              </ul>
+              <div class="socials">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+              </div>
+            </div>
+
+            <form class="contact__form reveal-up" id="contactForm" novalidate>
+              <div class="form__row">
+                <div class="input">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="input">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+              </div>
+              <div class="input">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="How can I help?" />
+              </div>
+              <div class="input">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project ..." required></textarea>
+              </div>
+              <div class="form__actions">
+                <button type="submit" class="btn btn--primary">Send Message</button>
+                <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+          <div class="map reveal-up" aria-label="Map">
+            <iframe title="Map of San Francisco" src="https://www.openstreetmap.org/export/embed.html?bbox=-122.551%2C37.693%2C-122.324%2C37.837&layer=mapnik" style="border:0" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© <span id="year"></span> Rayan Adrilard. All rights reserved.</p>
+        <a href="#home" class="backtotop" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-hidden="true">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <img class="lightbox__image" id="lightboxImage" alt="Portfolio preview" />
+      <div class="lightbox__controls">
+        <button class="btn-icon" id="lightboxPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn-icon" id="lightboxNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <script src="Script.js" defer></script>
+  </body>
+</html>
