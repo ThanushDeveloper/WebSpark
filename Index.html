@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Existing portfolio content goes here. Not changed by this edit. -->
 
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-grid contact-headings">
+          <h2 class="contact-title">Leave Us Your Info</h2>
+          <h2 class="contact-title contact-info-title">Contact Information</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Form -->
+          <div class="contact-form-card">
+            <form action="#" method="post" class="contact-form" autocomplete="on">
+              <label class="contact-label" for="fullName">Your Full Name ( Required )</label>
+              <input class="contact-input" type="text" id="fullName" name="fullName" required placeholder="" />
+
+              <label class="contact-label" for="email">Your Email ( Required )</label>
+              <input class="contact-input" type="email" id="email" name="email" required placeholder="" />
+
+              <label class="contact-label" for="subject">Subject</label>
+              <input class="contact-input" type="text" id="subject" name="subject" placeholder="" />
+
+              <label class="contact-label" for="message">Your Message</label>
+              <textarea class="contact-textarea" id="message" name="message" rows="7" placeholder=""></textarea>
+
+              <button class="contact-button" type="submit">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Right: Info Cards -->
+          <div class="contact-info-stack">
+            <div class="info-card">
+              <span class="card-icon" aria-hidden="true">📍</span>
+              <div class="info-rows">
+                <div class="info-row">
+                  <span class="info-key">Country:</span>
+                  <span class="info-value">Bangladesh</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">City:</span>
+                  <span class="info-value">Dhaka</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Streat:</span>
+                  <span class="info-value">35 Vhatara, Badda</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <span class="card-icon" aria-hidden="true">✉️</span>
+              <div class="info-rows">
+                <div class="info-row">
+                  <span class="info-key">Email:</span>
+                  <span class="info-value">Youremail@Gmail.Com</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Skype:</span>
+                  <span class="info-value">@Yourusername</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Telegram:</span>
+                  <span class="info-value">@Yourusername</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <span class="card-icon" aria-hidden="true">📱</span>
+              <div class="info-rows">
+                <div class="info-row info-row--split">
+                  <span class="info-key">Support Services:</span>
+                  <span class="info-value">15369</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Office:</span>
+                  <span class="info-value">+58 (021)356 587 235</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Personal:</span>
+                  <span class="info-value">+58 (021)356 587 235</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
