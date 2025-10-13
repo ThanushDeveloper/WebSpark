@@ -1,1 +1,49 @@
+/* Base reset and typography */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; background: #f1f1f6; }
 
+/* Contact Section */
+.contact-section { padding: 40px 0 60px; }
+.contact-container { max-width: 970px; margin: 0 auto; padding: 0 18px; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+
+/* Headings row */
+.contact-headings { margin-bottom: 10px; align-items: end; }
+.contact-title { margin: 0; font-weight: 700; font-size: 36px; line-height: 1.1; color: #1b1b1f; }
+.contact-info-title { text-align: right; }
+
+/* 2-column layout from tablet up */
+@media (min-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+/* Left: Form card */
+.contact-form-card { background: #ffffff; border-radius: 4px; padding: 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+.contact-form { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.contact-label { font-weight: 600; color: #41414a; font-size: 14px; }
+.contact-input, .contact-textarea { width: 100%; border: none; outline: none; background: #eeeff5; padding: 16px 18px; border-radius: 2px; font-size: 15px; color: #1b1b1f; }
+.contact-textarea { resize: vertical; min-height: 160px; }
+.contact-button { display: inline-block; background: #f7a600; color: #111; border: none; padding: 12px 18px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.3px; font-weight: 700; font-size: 13px; cursor: pointer; width: fit-content; }
+.contact-button:hover { filter: brightness(0.95); }
+
+/* Right: Info stack */
+.contact-info-stack { display: flex; flex-direction: column; gap: 24px; }
+.info-card { background: #ffffff; border-radius: 4px; padding: 24px; display: grid; grid-template-columns: 48px 1fr; column-gap: 18px; align-items: start; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+.card-icon { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: #ffc61b; border-radius: 999px; font-size: 18px; }
+.info-rows { display: flex; flex-direction: column; gap: 12px; }
+.info-row { display: flex; justify-content: space-between; gap: 18px; font-size: 15px; color: #3b3b45; }
+.info-row--split { align-items: center; }
+.info-key { font-weight: 600; color: #51515c; }
+.info-value { color: #777783; }
+
+/* Light divider feel matching UI */
+.info-card + .info-card { }
+
+/* Small screens refinements */
+@media (max-width: 899px) {
+  .contact-info-title { text-align: left; }
+  .info-row { justify-content: flex-start; }
+  .info-key { width: 160px; }
+}
