@@ -1,1 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <!-- Existing site content would be above -->
 
+    <section id="education" class="ep-education" aria-label="Education">
+      <div class="ep-container">
+        <h2 class="ep-visually-hidden">Education</h2>
+        <!-- Education content is assumed to already exist in real project -->
+      </div>
+    </section>
+
+    <!-- New portfolio/gallery section scoped with the `ep-` prefix -->
+    <section id="ep-portfolio" class="ep-portfolio" aria-labelledby="ep-portfolio-heading">
+      <div class="ep-container">
+        <h2 id="ep-portfolio-heading" class="ep-visually-hidden">Portfolio</h2>
+
+        <ul class="ep-tabs" role="tablist" aria-label="Portfolio categories">
+          <li role="presentation">
+            <button class="ep-tab is-active" data-filter="all" role="tab" aria-selected="true">All Categories</button>
+          </li>
+          <li role="presentation">
+            <button class="ep-tab" data-filter="ui" role="tab" aria-selected="false">UI Design</button>
+          </li>
+          <li role="presentation">
+            <button class="ep-tab" data-filter="web" role="tab" aria-selected="false">Web Templates</button>
+          </li>
+          <li role="presentation">
+            <button class="ep-tab" data-filter="logo" role="tab" aria-selected="false">Logo</button>
+          </li>
+          <li role="presentation">
+            <button class="ep-tab" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+          </li>
+        </ul>
+
+        <div class="ep-grid" aria-live="polite">
+          <figure class="ep-card is-highlighted" data-category="ui">
+            <img src="Assets/Group (1).png" alt="UI Design mockup" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+          <figure class="ep-card" data-category="ui">
+            <img src="Assets/Group (1).png" alt="Business cards" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+          <figure class="ep-card" data-category="branding">
+            <img src="Assets/Group (1).png" alt="Brand stationery" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+
+          <figure class="ep-card" data-category="web">
+            <img src="Assets/Group (1).png" alt="Restaurant web template" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+          <figure class="ep-card" data-category="logo">
+            <img src="Assets/Group (1).png" alt="Embossed logo mockup" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+          <figure class="ep-card" data-category="ui">
+            <img src="Assets/Group (1).png" alt="Business card design" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+
+          <figure class="ep-card" data-category="logo">
+            <img src="Assets/Group (1).png" alt="Stamp style logo mockup" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+          <figure class="ep-card" data-category="web">
+            <img src="Assets/Group (1).png" alt="Flyer template" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+          <figure class="ep-card" data-category="branding">
+            <img src="Assets/Group (1).png" alt="Corporate branding set" />
+            <figcaption class="ep-overlay"><span class="ep-plus">+</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <script src="Script.js" defer></script>
+  </body>
+</html>
