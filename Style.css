@@ -1,1 +1,116 @@
+:root {
+  --ep-black: #000;
+  --ep-white: #fff;
+  --ep-yellow: #ffb300;
+}
 
+/* Utility */
+.ep-visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+/* Scoped container to avoid affecting other layouts */
+.ep-container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Portfolio section */
+.ep-portfolio {
+  background: var(--ep-black);
+  color: var(--ep-white);
+  padding: 32px 0 48px;
+}
+
+/* Tabs */
+.ep-tabs {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  align-items: center;
+}
+.ep-tab {
+  background: none;
+  border: none;
+  color: #8f8f8f;
+  font: 600 18px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  cursor: pointer;
+  padding: 8px 0;
+}
+.ep-tab.is-active {
+  color: var(--ep-yellow);
+}
+
+/* Grid */
+.ep-grid {
+  --ep-gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--ep-gap);
+}
+
+/* Card */
+.ep-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #1b1b1b;
+}
+.ep-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay */
+.ep-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 179, 0, 0.9);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+.ep-card:hover .ep-overlay,
+.ep-card:focus-within .ep-overlay {
+  opacity: 1;
+}
+.ep-plus {
+  display: inline-block;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  color: var(--ep-black);
+  background: var(--ep-white);
+  text-align: center;
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* Highlighted first tile underlay */
+.ep-card.is-highlighted::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 179, 0, 0.85);
+}
+.ep-card.is-highlighted .ep-overlay { opacity: 1; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .ep-container { max-width: 100%; }
+}
+@media (max-width: 768px) {
+  .ep-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .ep-grid { grid-template-columns: 1fr; }
+}
